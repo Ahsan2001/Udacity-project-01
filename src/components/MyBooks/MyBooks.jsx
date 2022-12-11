@@ -67,7 +67,7 @@ const MyBooks = ({books, handleUpdateShelf}) => {
 }
 
 MyBooks.propTypes = {
-  book: PropTypes.object.isRequired,
+  books: PropTypes.array.isRequired,
   handleUpdateShelf: PropTypes.func.isRequired
 };
 

@@ -1,42 +1,20 @@
-## Backend Server
+# A Book Tracker App
+### App Functionality
+In this application, the main page displays a list of "shelves" (i.e. categories), each of which contains a number of books. The three shelves are:
+    Currently Reading
+    Want to Read
+    Read
+Each book has a control that lets you select the shelf for that book. When you select a different shelf, the book moves there. Note that the default value for the control should always be the current shelf the book is in.
+The main page also has a link to /search, a search page that allows you to find books to add to your library.
 
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
 
-- [`getAll`](#getall)
-- [`update`](#update)
-- [`search`](#search)
+## Setup
 
-### `getAll`
+1. Clone the repository and Change directory to UDACITY-PROJECT-01
+#####     cd UDACITY-PROJECT-01
 
-Method Signature:
+2. Install the dependencies by using the giving command
+#####     npm install
 
-```js
-getAll();
-```
-
-- Returns a Promise which resolves to a JSON object containing a collection of book objects.
-- This collection represents the books currently in the bookshelves in your app.
-
-### `update`
-
-Method Signature:
-
-```js
-update(book, shelf);
-```
-
-- book: `<Object>` containing at minimum an `id` attribute
-- shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]
-- Returns a Promise which resolves to a JSON object containing the response data of the POST request
-
-### `search`
-
-Method Signature:
-
-```js
-search(query);
-```
-
-- query: `<String>`
-- Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
-- These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
+3. After installing dependencies start the frontend application locally
+#####     npm start
